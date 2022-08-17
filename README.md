@@ -1,7 +1,8 @@
 # BakerOnlineAutomation
 Contains automated tests for https://bakeronline.be/be-en/demo-shop
 
-Description
+## Description
+
 Using Selenium, Nlog and ExtentReports I was able to make automated tests for for https://bakeronline.be/be-en/demo-shop, and after every run logs and a .html report will be created with details how the tests performed. 
 
 Functionalities that were automated are:
@@ -15,20 +16,20 @@ Functionalities that were automated are:
 
 Tests are writen in C#
 
-Technologies used:
-Selenium v.4.3.0
-Selenium ChromeDriver v.104.0.5112.7900
-NLog v.5.0.1
-ExtentReports v.4.1.0
+### Technologies used:
+Selenium v.4.3.0<br />
+Selenium ChromeDriver v.104.0.5112.7900<br />
+NLog v.5.0.1<br />
+ExtentReports v.4.1.0<br />
 
 Take note that Selenium WebDriver needs to be updated to match version of your Chrome, which should be updated to the latest version.
 
-Using Selenium ChromeDriver we are able to Chrome and interact with it to successfuly run our automated tests.
-Using Selenium we are able to manipulate page elements to search for errors and bugs at the application.
-Using Nlog we are able to log our steps and write logs to check of what happened after we ran our tests.
-Using ExtentReports we are able to generate .html reports for a review of all the tests we ran, whether they passed or failed, and take screenshots.
+Using Selenium ChromeDriver we are able to run Chrome and interact with it to successfuly run our automated tests.<br />
+Using Selenium we are able to manipulate page elements to search for errors and bugs at the application.<br />
+Using Nlog we are able to log our steps and write logs to check of what happened after we ran our tests.<br />
+Using ExtentReports we are able to generate .html reports for a review of all the tests we ran, whether they passed or failed, and take screenshots.<br />
 
-Instructions on how to use:
+### Instructions on how to use
 1. Download Visual Studio from https://visualstudio.microsoft.com/vs/
 2. On the web site hover over Download Visual Studio dropdown. Choose option: Community 2022
 3. Run VisualStudioSetup.exe. Visual Studio Installer will open.
@@ -52,36 +53,45 @@ Instructions on how to use:
 21. In the Test Explorer you can start running tests by right clicking on categories or single tests and clicking Run.
 22. After the test or tests have ran, logs and a report will be generated in the C:\temp\BakerOnlineAutomation. There you can see outcome of the tests ran.
 
-Pages description
-BasePage -> A base page from which other pages inherit common properties and methods.
-RegistrationPage -> A page representing Registration page in the application. Contains method for filling out and submiting registation form.
-ExternalEmailPage -> An external page not connected to the application that visits the https://10minutemail.net/ website. Used for generating new valid emails and reseting the password.
-HomePage -> A page representing Home page in the application.
-UserMenu -> A page representing User Menu in the application. Contains method for logging out the user.
-LoginPage -> A page representing Login page in the application. Contains method for inputing login information.
-ForgotPasswordPage -> A page representing Forgot Password page in the application. Contains method for submiting the email page which reset password link will be sent to.
-ResetPasswordPage -> A page representing Reset Password page in the application. Contains method to submit a new password.
-SearchPage -> A page representing Search page in the application. Used for checking if products are visible on the page and adding them to the Cart.
-ProductPage -> A page representing Product page in the application. Used for checking if product details are visible.
-CheckoutPage -> A page representing Checkout in the application to which the user is redirected after placing the order. Contains methods for completing the order.
-Header -> A page representing Header in the application. Contains methods for searching products and using the Cart.
-Cart -> A page representing Cart in the application.
+## Automation Resources
+This project is in charge of fetching instances of Web Driver from a single location to be used anywhere in the entire solution.
+### Classes
+WebDriverFactory -> Contains a method that creates and gets ChromeDriver class which is needed to run Chrome.<br />
+BrowserType -> A class containing browser type enums.<br />
 
-Test Pages description
-BaseTest -> A base test page from which other test pages inherit common properties and methods.
-BakerOnlineUserTests -> A test page taht contains tests concerning users.
-BakerOnlineProductsTests -> A test page taht contains tests concerning products.
+## BakerOnlineAutomation
+This project contains tests that represent user actions and page classes that represent pages in the application.
+### Pages description
+BasePage -> A base page from which other pages inherit common properties and methods.<br />
+RegistrationPage -> A page representing Registration page in the application. Contains method for filling out and submiting registation form.<br />
+ExternalEmailPage -> An external page not connected to the application that visits the https://10minutemail.net/ website. Used for generating new valid emails and reseting the password.<br />
+HomePage -> A page representing Home page in the application.<br />
+UserMenu -> A page representing User Menu in the application. Contains method for logging out the user.<br />
+LoginPage -> A page representing Login page in the application. Contains method for inputing login information.<br />
+ForgotPasswordPage -> A page representing Forgot Password page in the application. Contains method for submiting the email page which reset password link will be sent to.<br />
+ResetPasswordPage -> A page representing Reset Password page in the application. Contains method to submit a new password.<br />
+SearchPage -> A page representing Search page in the application. Used for checking if products are visible on the page and adding them to the Cart.<br />
+ProductPage -> A page representing Product page in the application. Used for checking if product details are visible.<br />
+CheckoutPage -> A page representing Checkout in the application to which the user is redirected after placing the order. Contains methods for completing the order.<br />
+Header -> A page representing Header in the application. Contains methods for searching products and using the Cart.<br />
+Cart -> A page representing Cart in the application.<br />
 
-Other classes description
-TestUser -> A user class for passing first name, last name, password, email address and phone number properties.
-Product -> A product class containing product enums.
-Reporter -> A class that takes care of generating reports and logs.
-NamespaceSetup -> A class that makes sure only one report will be genereted per test run. Runing multiple tests will put them in the same report.
-ScreenshoTaker -> A class used for taking screenshots. Will automaticaly take a screenshot after a test has failed.
+### Test Pages description
+BaseTest -> A base test page from which other test pages inherit common properties and methods.<br />
+BakerOnlineUserTests -> A test page taht contains tests concerning users.<br />
+BakerOnlineProductsTests -> A test page taht contains tests concerning products.<br />
 
-Tests description
-Registering a user
+### Other classes description
+TestUser -> A user class for passing first name, last name, password, email address and phone number properties.<br />
+Product -> A product class containing product enums.<br />
+Reporter -> A class that takes care of generating reports and logs.<br />
+NamespaceSetup -> A class that makes sure only one report will be genereted per test run. Runing multiple tests will put them in the same report.<br />
+ScreenshoTaker -> A class used for taking screenshots. Will automaticaly take a screenshot after a test has failed.<br />
+
+### Tests description
+#### Registering a user
 Test is located in BakerOnlineUserTests TestClass PBI1, under the TestMethod TCID1.
+
 Steps:
 1. Opening the Registration page.
 2. Opening the External Email page in a new tab.
@@ -90,8 +100,9 @@ Steps:
 5. Filling out and submiting the registration form.
 6. Asserting that the page was redirected to the Home page and that the user is logged in.
 
-Logging in and loging out of the application
+#### Logging in and loging out of the application
 Test is located in BakerOnlineUserTests TestClass PBI1, under the TestMethod TCID2.
+
 Steps:
 1. Opening the Login page.
 2. Inputing the login info and attempting to log in.
@@ -99,8 +110,9 @@ Steps:
 4. Opening te User Menu and attempting to log out.
 5. Asserting that the user is logged out.
 
-Reseting the password and then logging in using the new password
+#### Reseting the password and then logging in using the new password
 Test is located in BakerOnlineUserTests TestClass PBI1, under the TestMethod TCID3.
+
 Steps:
 1. Opening the Registration page.
 2. Opening the External Email page in a new tab.
@@ -122,8 +134,9 @@ Steps:
 18. Inputing the login info with the new password and attempting to log in.
 19. Asserting that the page was redirected to the Home page and that the user is logged in.
 
-Browsing products as a visitor
+#### Browsing products as a visitor
 Test is located in BakerOnlineProductsTests TestClass PBI2, under the TestMethod TCID1.
+
 Steps:
 1. Opening the Home page.
 2. Searching for a product in the search field.
@@ -131,8 +144,9 @@ Steps:
 4. Clicking on the product.
 5. Asserting that the product details are visible.
 
-Browsing products as a user
+#### Browsing products as a user
 Test is located in BakerOnlineProductsTests TestClass PBI2, under the TestMethod TCID2.
+
 Steps:
 1. Opening the Login page.
 2. Inputing the login info and attempting to log in.
@@ -142,8 +156,9 @@ Steps:
 6. Clicking on the product.
 7. Asserting that the product details are visible.
 
-Ordering a product as a user
+#### Ordering a product as a user
 Test is located in BakerOnlineProductsTests TestClass PBI2, under the TestMethod TCID3.
+
 Steps:
 1. Opening the Login page.
 2. Inputing the login info and attempting to log in.
@@ -161,8 +176,9 @@ Steps:
 12. Chosing Payment at Pick Up as the payment method.
 13. Asserting that the Checkout Success page is visible.
 
-Ordering two products as a user
+#### Ordering two products as a user
 Test is located in BakerOnlineProductsTests TestClass PBI2, under the TestMethod TCID4.
+
 Steps:
 1. Opening the Login page.
 2. Inputing the login info and attempting to log in.
