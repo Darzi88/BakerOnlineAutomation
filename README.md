@@ -29,37 +29,28 @@ Using Nlog we are able to log our steps and write logs to check of what happened
 Using ExtentReports we are able to generate .html reports for a review of all the tests we ran, whether they passed or failed, and take screenshots.
 
 Instructions on how to use:
-1.  Download visual studio from https://visualstudio.microsoft.com/vs/
-    On the web site hover over Download Visual Studio dropdown
-    Choose option: Community 2022
-2.  Run VisualStudioSetup.exe
-    Visual Studio Installer will open
-3.  On the first step click Continue
-    This will start a short download and installation proccess
-4.  On the next step the installer will offer for you to choose workloads to install in addtition to Visual Studio Core
-    In Desktop & Mobile section choose .NET desktop development workload
-    On the right side a copule of optional features will pop up. No need to touch those.
-    Under the workloads you can choose Location where you want install visual studio
-    Then in the bottom right corner click Install button
-5.  After the instalaltion open Visual Studio
-    You can sign in with your account or choose Skip this for now
-    Then choose Start Visual Studio
-6.  In then next window under Get started choose option to clone a repository
-    In the Repository location copy the URL: https://github.com/Darzi88/BakerOnlineAutomation
-    You can change the Path where the repository will be copied
-    Click Clone
-7.  Inside the Build tab choose Build Solution (shortcut Ctrl+Shift+B)
-8.  On the right side of the screen right click on the Solution and choose Manage NuGet Packages for Solution...
-    In the search field type chrome
-    Click on Selenium.WebDriver.ChromeDriver and install latest stable version
-9.  Also make sure you have the latest version of Google Chrome on your PC
-    To update Google Chrome open it and then in the top right corner of the screen click on three dots -> Help -> About Google Chrome
-    This will update Google Chrome to the latest version automatically
-10. In the Visual Studion inside the View tab choose build Test Explorer (shortcut Ctrl+E, T)
-    You can drag and drop it to the left middle of the screen so you can view it side by side with the Solution
-11. In the Test Explorer you can start running tests by right clicking on categories or single tests and choosing Run
-12. After the test or tests have ran, logs and a report will be generated in the C:\temp\BakerOnlineAutomation
-    There you can see outcome of the tests ran
+1. Download Visual Studio from https://visualstudio.microsoft.com/vs/
+2. On the web site hover over Download Visual Studio dropdown. Choose option: Community 2022
+3. Run VisualStudioSetup.exe. Visual Studio Installer will open.
+4. On the first step click Continue. This will start a short download and installation proccess.
+5. On the next step the Installer will offer for you to choose workloads to install in addtition to Visual Studio Core.
+6. In Desktop & Mobile section choose .NET desktop development workload.
+7. On the right side a copule of optional features will pop up. No need to touch those.
+8. Under the workloads you can choose Location where you want install Visual Studio. Then in the bottom right corner click Install button.
+9. After the instalaltion open Visual Studio.
+10. You can sign in with your account or choose Skip this for now. Then click on Start Visual Studio button.
+11. In then next window under Get started choose option to clone a repository.
+12. In the Repository location copy the URL: https://github.com/Darzi88/BakerOnlineAutomation
+13. You can change the Path where the repository will be copied. Then click Clone.
+14. Inside the Build tab click Build Solution (shortcut Ctrl+Shift+B)
+15. On the right side of the screen right click on the Solution and click Manage NuGet Packages for Solution...
+16. In the search field type chrome
+17. Click on Selenium.WebDriver.ChromeDriver and install latest stable version.
+18. Also make sure you have the latest version of Google Chrome on your PC.
+19. To update Google Chrome open it and then in the top right corner of the screen click on three dots -> Help -> About Google Chrome. This will update Google Chrome to the latest version automatically.
+20. In the Visual Studion inside the View tab click Test Explorer (shortcut Ctrl+E, T). You can drag and drop it to the left middle of the screen so you can view it side by side with the Solution.
+21. In the Test Explorer you can start running tests by right clicking on categories or single tests and clicking Run.
+22. After the test or tests have ran, logs and a report will be generated in the C:\temp\BakerOnlineAutomation. There you can see outcome of the tests ran.
 
 Pages description
 BasePage -> A base page from which other pages inherit common properties and methods.
